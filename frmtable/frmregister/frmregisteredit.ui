@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FrmRegisterEdit</class>
+ <widget class="QDialog" name="FrmRegisterEdit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3" rowstretch="1,9,0">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labTitle">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <layout class="QGridLayout" name="gridLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QToolButton" name="toolButton">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="5,5">
+        <item>
+         <widget class="QWidget" name="widget_4" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,7,1">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="3" column="4" colspan="2">
+              <widget class="QLineEdit" name="editContractNum"/>
+             </item>
+             <item row="2" column="4">
+              <widget class="QComboBox" name="cbxPayType"/>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLabel" name="label_25">
+               <property name="text">
+                <string>合同号码:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>支付方式:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>收购类型:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QComboBox" name="cbxPackType"/>
+             </item>
+             <item row="2" column="2">
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>标签号码:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1" colspan="2">
+              <widget class="QLineEdit" name="editTagNum"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>IC卡号码:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1" colspan="2">
+              <widget class="QLineEdit" name="editICNum"/>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="cbxPurchaseType">
+               <item>
+                <property name="text">
+                 <string>散收粮</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>合同粮</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>粮食类型:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QComboBox" name="cbxGrainType"/>
+             </item>
+             <item row="1" column="5">
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>包装类型:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_29">
+               <property name="text">
+                <string>凭证号:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="labMainNum">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout_4" rowstretch="0,0" columnstretch="5,5">
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="title">
+                <string>车辆信息</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_8">
+                  <property name="text">
+                   <string>车牌号码:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="editLiscense"/>
+                </item>
+                <item row="0" column="2">
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>23</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_9">
+                  <property name="text">
+                   <string>车辆类型:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>23</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_10">
+                  <property name="text">
+                   <string>车辆颜色:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="editColor"/>
+                </item>
+                <item row="2" column="2">
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>23</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_11">
+                  <property name="text">
+                   <string>车架号码:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="editFrameNum"/>
+                </item>
+                <item row="3" column="2">
+                 <spacer name="horizontalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>23</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QComboBox" name="cbxVehicleType"/>
+                </item>
+               </layout>
+               <zorder>label_8</zorder>
+               <zorder>editLiscense</zorder>
+               <zorder>label_9</zorder>
+               <zorder>label_10</zorder>
+               <zorder>editColor</zorder>
+               <zorder>label_11</zorder>
+               <zorder>editFrameNum</zorder>
+               <zorder>horizontalSpacer_8</zorder>
+               <zorder>horizontalSpacer_9</zorder>
+               <zorder>horizontalSpacer_10</zorder>
+               <zorder>groupBox_3</zorder>
+               <zorder>horizontalSpacer_11</zorder>
+               <zorder>cbxVehicleType</zorder>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="groupBox">
+               <property name="title">
+                <string>售粮人</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_7">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_15">
+                  <property name="text">
+                   <string>姓名:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="editSellerName"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>身份证号码:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="editSellerNum"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_14">
+                  <property name="text">
+                   <string>身份证住址:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="editSellerAddress"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_12">
+                  <property name="text">
+                   <string>联系电话:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="editSellerPhone"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="title">
+                <string>结算人</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="1" colspan="2">
+                 <widget class="QLineEdit" name="editPayeeName"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_20">
+                  <property name="text">
+                   <string>身份证号码:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1" colspan="2">
+                 <widget class="QLineEdit" name="editPayeeNum"/>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_21">
+                  <property name="text">
+                   <string>姓名:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_22">
+                  <property name="text">
+                   <string>身份证住址:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1" colspan="2">
+                 <widget class="QLineEdit" name="editPayeeAddress"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_23">
+                  <property name="text">
+                   <string>联系电话:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1" colspan="2">
+                 <widget class="QLineEdit" name="editPayeePhone"/>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="label_27">
+                  <property name="text">
+                   <string>银行类型:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QComboBox" name="cbxBankType"/>
+                </item>
+                <item row="4" column="2">
+                 <spacer name="horizontalSpacer_12">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>86</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="5" column="0">
+                 <widget class="QLabel" name="label_28">
+                  <property name="text">
+                   <string>银行卡号:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1" colspan="2">
+                 <widget class="QLineEdit" name="editBankNum"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QGroupBox" name="groupBox_3">
+               <property name="title">
+                <string>司机</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_9">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_17">
+                  <property name="text">
+                   <string>姓名:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="editDriverName"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_16">
+                  <property name="text">
+                   <string>身份证号码:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="editDriverNum"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_18">
+                  <property name="text">
+                   <string>身份证住址:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="editDriverAddress"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_19">
+                  <property name="text">
+                   <string>联系电话:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLineEdit" name="editDriverPhone"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="spacing">
+              <number>20</number>
+             </property>
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_26">
+               <property name="text">
+                <string>备注信息:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="editRemarks"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="GbsImageWidget" name="imageWidget" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout" stretch=""/>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <property name="spacing">
+         <number>20</number>
+        </property>
+        <item>
+         <spacer name="horizontalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnEdit">
+          <property name="text">
+           <string>修改</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnReturn">
+          <property name="text">
+           <string>返回</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GbsImageWidget</class>
+   <extends>QWidget</extends>
+   <header>gbsimagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
