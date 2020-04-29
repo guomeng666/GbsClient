@@ -22,19 +22,14 @@ public:
 
 private slots:
     void on_cbxpurchase_currentIndexChanged(int index);
-    void topButtonClick();
-    void onMenuButtonClick();
-    void on_btnSave_clicked();
-
     void on_editSellerNum_returnPressed();
-
     void on_editPayeeNum_returnPressed();
-
     void on_editLiscense_returnPressed();
-
-    void on_btnClear_clicked();
-
     void on_editDriverNum_returnPressed();
+    void on_btnClear_clicked();
+    void on_btnSave_clicked();
+    void onMenuButtonClick();
+    void topButtonClick();
 
 private:
     void initStyle();

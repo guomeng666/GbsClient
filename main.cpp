@@ -4,6 +4,7 @@
 #include "frmregisteredit.h"
 #include "gbsimagewidget.h"
 #include "gbstoolfunctions.h"
+#include "frmsampling.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

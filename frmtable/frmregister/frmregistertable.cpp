@@ -155,8 +155,3 @@ void FrmRegisterTable::onDeleteRow(const QStringList &row)
     editData("delete",row);
 }
 
-void FrmRegisterTable::on_btnAdd_clicked()
-{
-    editData("add",QStringList());
-}
-

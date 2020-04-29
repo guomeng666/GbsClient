@@ -19,7 +19,6 @@ public:
 
 private slots:
     void closeEvent(QCloseEvent* event) Q_DECL_OVERRIDE;
-    void on_btnAdd_clicked();
     void onEventShowTableData();
     void on_btnQuery_clicked();
     void on_btnRefresh_clicked();

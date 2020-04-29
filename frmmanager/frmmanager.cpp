@@ -21,6 +21,7 @@
 #include "frmcontracttable.h"
 #include "frmregistertable.h"
 #include "frmregister.h"
+#include "frmsampling.h"
 #include "ui_frmmanager.h"
 #include <QDebug>
 #include <QToolBar>
@@ -72,6 +73,8 @@ QWidget* Frmmanager::frmFactory(const QString &name)
         return new FrmRegister(this);
     }else if(name == "登记查询"){
         return new FrmRegisterTable(this);
+    }else if(name == "扦样业务"){
+        return new FrmSampling(this);
     }
     return nullptr;
 }

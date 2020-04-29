@@ -88,6 +88,11 @@ bool GbsToolFunctions::getVehicleByLiscense(QString liscense, QStringList &resul
     }
 }
 
+bool GbsToolFunctions::getVehicleByTagNum(QString tagNum, QStringList &result)
+{
+
+}
+
 //将QLabel上显示的图片转换成字符串
 QString GbsToolFunctions::lablePixmapToString(QLabel *lab)
 {

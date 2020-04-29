@@ -49,6 +49,7 @@ INCLUDEPATH +=  $$PWD\frmlogin\
                 $$PWD\frmtable\frmcontract\
                 $$PWD\frmtable\frmregister\
                 $$PWD\frmbusiness\frmregister\
+                $$PWD\frmbusiness\frmsampling\
 
 INCLUDEPATH +=  $$PWD\service\base\department\
                 $$PWD\service\base\permission\
