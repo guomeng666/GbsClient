@@ -46,7 +46,8 @@ HEADERS += \
     $$PWD/business/register/editregister.h \
     $$PWD/business/register/queryregister.h \
     $$PWD/business/queryseller/queryseller.h \
-    $$PWD/business/querypicture/querypicture.h
+    $$PWD/business/querypicture/querypicture.h \
+    $$PWD/business/queryseller/querysellerbyidentityid.h
 
 
 SOURCES += \
