@@ -42,7 +42,11 @@ FORMS += \
     $$PWD/frmcontract/frmcontractedit.ui \
     $$PWD/frmcontract/frmcontracttable.ui \
     $$PWD/frmregister/frmregistertable.ui \
-    $$PWD/frmregister/frmregisteredit.ui
+    $$PWD/frmregister/frmregisteredit.ui \
+    $$PWD/frmsampling/frmsamplingedit.ui \
+    $$PWD/frmsampling/frmsamplingtable.ui \
+    $$PWD/frmassay/frmassayedit.ui \
+    $$PWD/frmassay/frmassaytable.ui
 
 
 
@@ -91,7 +95,11 @@ HEADERS += \
     $$PWD/frmcontract/frmcontractedit.h \
     $$PWD/frmcontract/frmcontracttable.h \
     $$PWD/frmregister/frmregistertable.h \
-    $$PWD/frmregister/frmregisteredit.h
+    $$PWD/frmregister/frmregisteredit.h \
+    $$PWD/frmsampling/frmsamplingedit.h \
+    $$PWD/frmsampling/frmsamplingtable.h \
+    $$PWD/frmassay/frmassayedit.h \
+    $$PWD/frmassay/frmassaytable.h
 
 SOURCES += \
     $$PWD/frmpermission/frmpermissionedit.cpp \
@@ -138,4 +146,8 @@ SOURCES += \
     $$PWD/frmcontract/frmcontractedit.cpp \
     $$PWD/frmcontract/frmcontracttable.cpp \
     $$PWD/frmregister/frmregistertable.cpp \
-    $$PWD/frmregister/frmregisteredit.cpp
+    $$PWD/frmregister/frmregisteredit.cpp \
+    $$PWD/frmsampling/frmsamplingedit.cpp \
+    $$PWD/frmsampling/frmsamplingtable.cpp \
+    $$PWD/frmassay/frmassayedit.cpp \
+    $$PWD/frmassay/frmassaytable.cpp

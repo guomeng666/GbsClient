@@ -1,13 +1,13 @@
-#include "frmsampling.h"
+#include "frmassay.h"
 #include "gbstoolfunctions.h"
-#include "ui_frmsampling.h"
+#include "ui_frmassay.h"
 #include <QDebug>
 #include <QBuffer>
 #include <QPixmap>
 
-FrmSampling::FrmSampling(QWidget *parent) :
+FrmAssay::FrmAssay(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::FrmSampling)
+    ui(new Ui::FrmAssay)
 {
     ui->setupUi(this);
     this->initBtn();
@@ -15,20 +15,20 @@ FrmSampling::FrmSampling(QWidget *parent) :
 //    initStyle();
 }
 
-FrmSampling::~FrmSampling()
+FrmAssay::~FrmAssay()
 {
     delete ui;
 }
 
-void FrmSampling::initForm()
+void FrmAssay::initForm()
 {
-    ui->labVedio1->setPixmap(QPixmap::fromImage(QImage(":/image/test1")));
-    ui->labVedio2->setPixmap(QPixmap::fromImage(QImage(":/image/test2")));
-    ui->labVedio3->setPixmap(QPixmap::fromImage(QImage(":/image/test3")));
-    ui->labVedio4->setPixmap(QPixmap::fromImage(QImage(":/image/test4")));
+//    ui->labVedio1->setPixmap(QPixmap::fromImage(QImage(":/image/test1")));
+//    ui->labVedio2->setPixmap(QPixmap::fromImage(QImage(":/image/test2")));
+//    ui->labVedio3->setPixmap(QPixmap::fromImage(QImage(":/image/test3")));
+//    ui->labVedio4->setPixmap(QPixmap::fromImage(QImage(":/image/test4")));
 }
 
-void FrmSampling::initStyle()
+void FrmAssay::initStyle()
 {
      QStringList qss;
      //主界面顶部栏
@@ -50,7 +50,7 @@ void FrmSampling::initStyle()
      qApp->setStyleSheet(qss.join(""));
 }
 
-void FrmSampling::initBtn()
+void FrmAssay::initBtn()
 {
     //设置顶部导航按钮
     QList<QToolButton *> tbtns = ui->widgetTop->findChildren<QToolButton *>();
@@ -71,7 +71,7 @@ void FrmSampling::initBtn()
     ui->btnWork->setChecked(true);
 }
 
-void FrmSampling::topButtonClick()
+void FrmAssay::topButtonClick()
 {
     QToolButton* b = (QToolButton*)sender();
     QString name = b->text();
@@ -91,20 +91,59 @@ void FrmSampling::topButtonClick()
     }
 }
 
-void FrmSampling::onMenuButtonClick()
+
+void FrmAssay::onMenuButtonClick()
 {
 
 }
 
-
-void FrmSampling::editBusinessInformation(QString editStatus)
+void FrmAssay::on_editSampleBoxNum_returnPressed()
 {
     //创建回话
     GbsSession session;
-    session.addRequestData("Cmd",CmdEditRegister);
+    session.addRequestData("Cmd",CmdQueryAssayBySampleBoxNum);
     session.addRequestData("Sender","Admin");
-    session.addRequestData("Operation",editStatus);
-    session.addRequestData("Number","0");
+    session.addRequestData("Name",ui->editSampleBoxNum->text());
+    //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
+    Singleton<ServiceManager>::Instance().doAction(session);
+    //调用返回,判断回话的应答标志
+    QStringList result;
+    if(session.getErrNo() == 0){
+       result =  session.getRow(0);
+       ui->labAssayNum->setText(result.at(0));
+       ui->labGrainType->setText(result.at(1));
+    }else{
+        result = QStringList()<<session.getLastErrString();
+        return;
+    }
+}
+
+void FrmAssay::submitAssayData()
+{
+    //创建回话
+    GbsSession session;
+    session.addRequestData("Cmd",CmdEditAssay);
+    session.addRequestData("Sender","Admin");
+    session.addRequestData("Operation","add");
+    session.addRequestData("Number",ui->labAssayNum->text());
+    session.addRequestData("GrainType",ui->labGrainType->text());
+    session.addRequestData("UnitWeight",ui->editRZ->text());
+    session.addRequestData("Moisture",ui->editSF->text());
+    session.addRequestData("Impurity",ui->editZZ->text());
+    session.addRequestData("Mildew",ui->editMB->text());
+    session.addRequestData("Broken",ui->editPS->text());
+    session.addRequestData("HeatHarm",ui->editRS->text());
+    session.addRequestData("SideImpurity",ui->editBJZ->text());
+    session.addRequestData("Scree",ui->editXSZ->text());
+    session.addRequestData("SoilBlock",ui->editTK->text());
+    session.addRequestData("RodCore",ui->editBX->text());
+    session.addRequestData("DifGrain",ui->editYZL->text());
+    session.addRequestData("BlistersGrain",ui->editSPL->text());
+    session.addRequestData("PeculiarSmell",QString::number(ui->cbxSmell->currentIndex()));
+    session.addRequestData("RoughWeight",ui->editMZ->text());
+    session.addRequestData("NetWeight",ui->editJZ->text());
+    session.addRequestData("SampleBag",ui->editReservedNum->text());
+    session.addRequestData("Remarks",ui->textEditRemark->toPlainText());
     //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
     Singleton<ServiceManager>::Instance().doAction(session);
     //调用返回,判断回话的应答标志
@@ -115,43 +154,16 @@ void FrmSampling::editBusinessInformation(QString editStatus)
     }
 }
 
-void FrmSampling::on_editTagNum_returnPressed()
+bool FrmAssay::checkEditData()
 {
-    QStringList resultRow;
-    if(GbsToolFunctions::getRegisterInfoByTagNum(ui->editTagNum->text(),resultRow)){
-        ui->editLiscense->setText(resultRow.at(4));
-        ui->editVehicleType->setText(resultRow.at(5));
-        ui->editColor->setText(resultRow.at(6));
-        ui->editFrameNum->setText(resultRow.at(7));
-        m_currentRegisterID = resultRow.at(0);
-        m_currentVehicleID = resultRow.at(8);
+    return true;
+}
+
+void FrmAssay::on_btnSubmit_clicked()
+{
+    //检测数据
+    if(checkEditData()){
+        submitAssayData();
     }
 }
 
-//模拟扦样完成
-void FrmSampling::on_pushButton_3_clicked()
-{
-    //如果校验数据没有任何问题,向服务器发送扦样完成信息
-    //创建回话
-    GbsSession session;
-    session.addRequestData("Cmd",CmdEditSamling);
-    session.addRequestData("Sender","Admin");
-    session.addRequestData("Operation","add");
-    session.addRequestData("Number","0");
-    session.addRequestData("RegisterID",m_currentRegisterID);
-    session.addRequestData("SampleBoxNum","2538377");
-    session.addRequestData("Remarks",ui->editRemarks->text());
-    session.addRequestData("Picture1",GbsToolFunctions::lablePixmapToString(ui->labVedio1));
-    session.addRequestData("Picture2",GbsToolFunctions::lablePixmapToString(ui->labVedio2));
-    session.addRequestData("Picture3",GbsToolFunctions::lablePixmapToString(ui->labVedio3));
-    session.addRequestData("Picture4",GbsToolFunctions::lablePixmapToString(ui->labVedio4));
-
-    //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
-    Singleton<ServiceManager>::Instance().doAction(session);
-    //调用返回,判断回话的应答标志
-    if(session.getErrNo() == 0){
-        qDebug()<<"扦样完成";
-    }else{
-        qDebug()<<"扦样失败";
-    }
-}

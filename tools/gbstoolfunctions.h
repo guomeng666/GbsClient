@@ -18,7 +18,7 @@ public:
     //使用车牌号码获取车辆信息
     static bool getVehicleByLiscense(QString liscense, QStringList &result);
     //使用电子标签获取车辆信息
-    static bool getVehicleByTagNum(QString tagNum, QStringList &result);
+    static bool getRegisterInfoByTagNum(QString tagNum, QStringList &result);
     static QString lablePixmapToString(QLabel* lab);
     static bool contractIsValid(const QString &num);
     static QList<QImage> getImageFromService(const QString &nodeName, const QString &number);

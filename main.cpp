@@ -5,6 +5,7 @@
 #include "gbsimagewidget.h"
 #include "gbstoolfunctions.h"
 #include "frmsampling.h"
+#include "frmassay.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

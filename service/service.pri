@@ -47,7 +47,13 @@ HEADERS += \
     $$PWD/business/register/queryregister.h \
     $$PWD/business/queryseller/queryseller.h \
     $$PWD/business/querypicture/querypicture.h \
-    $$PWD/business/queryseller/querysellerbyidentityid.h
+    $$PWD/business/queryseller/querysellerbyidentityid.h \
+    $$PWD/business/queryRegistbyTagNum/queryregisterbytagnum.h \
+    $$PWD/business/sampling/editsampling.h \
+    $$PWD/business/sampling/querysampling.h \
+    $$PWD/business/queryassaybySampleBox/queryassaybysamplebox.h \
+    $$PWD/business/assay/editassay.h \
+    $$PWD/business/assay/queryassay.h
 
 
 SOURCES += \
@@ -97,5 +103,11 @@ SOURCES += \
     $$PWD/business/register/editregister.cpp \
     $$PWD/business/register/queryregister.cpp \
     $$PWD/business/queryseller/querysellerbyidentityid.cpp \
-    $$PWD/business/querypicture/querypicture.cpp
+    $$PWD/business/querypicture/querypicture.cpp \
+    $$PWD/business/queryRegistbyTagNum/queryregisterbytagnum.cpp \
+    $$PWD/business/sampling/editsampling.cpp \
+    $$PWD/business/sampling/querysampling.cpp \
+    $$PWD/business/queryassaybySampleBox/queryassaybysamplebox.cpp \
+    $$PWD/business/assay/editassay.cpp \
+    $$PWD/business/assay/queryassay.cpp
 

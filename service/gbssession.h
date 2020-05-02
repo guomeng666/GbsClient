@@ -17,6 +17,15 @@
 
 #define CmdQuerySellerByIdentityID "7"
 
+#define CmdQueryRegisterByTagNum "9"
+
+#define CmdEditSamling "10"
+#define CmdQuerySamling "11"
+
+#define CmdQueryAssayBySampleBoxNum "12"
+#define CmdEditAssay "13"
+#define CmdQueryAssay "14"
+
 #define CmdEditVehicle "256"
 #define CmdQueryVehicle "257"
 

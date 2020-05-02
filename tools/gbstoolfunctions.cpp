@@ -44,6 +44,13 @@ void GbsToolFunctions::setComboxItem(const QString cmd, QComboBox *bx)
     }
 }
 
+/**
+  功能:通过身份证号码查询售粮户信息
+  参数: tagNum = 电子标签号码, result = 查询的数据
+  成功返回result格式: "ID","Name","IdentityID","Address","Phone","BankType","BankID","Creater","Updater","CreateTime","UpdateTime"
+  错误返回result格式: "具体失败的内容"
+  返回: 存在:true , 不存在:false
+*/
 bool GbsToolFunctions::getSellerInfoByIdentityID(QString identity, QStringList &result)
 {
     //创建回话
@@ -64,6 +71,13 @@ bool GbsToolFunctions::getSellerInfoByIdentityID(QString identity, QStringList &
     }
 }
 
+/**
+  功能:通过车牌号码查询车辆信息
+  参数: tagNum = 电子标签号码, result = 查询的数据
+  成功返回result格式: "ID","Name","VehicleType","color","FrameID","Creater","Updater","CreateTime","UpdateTime"
+  错误返回result格式: "具体失败的内容"
+  返回: 存在:true , 不存在:false
+*/
 bool GbsToolFunctions::getVehicleByLiscense(QString liscense, QStringList &result)
 {
     //创建回话
@@ -88,9 +102,35 @@ bool GbsToolFunctions::getVehicleByLiscense(QString liscense, QStringList &resul
     }
 }
 
-bool GbsToolFunctions::getVehicleByTagNum(QString tagNum, QStringList &result)
+/**
+  功能:通过电子标签号码获取登记信息
+  参数: tagNum = 电子标签号码, result = 查询的数据
+  成功返回result格式: "ID","PurchaseType","PackType","GrainType","License","VehicleType","VehicleColor","VehicleFrame"
+  错误返回result格式: "具体失败的内容"
+  返回: 存在:true , 不存在:false
+*/
+bool GbsToolFunctions::getRegisterInfoByTagNum(QString tagNum, QStringList &result)
 {
+    //创建回话
+    GbsSession session;
+    session.addRequestData("Cmd",CmdQueryRegisterByTagNum);
+    session.addRequestData("Sender","Admin");
+    session.addRequestData("Name",tagNum);
+    session.addRequestData("StartPage","1");
+    session.addRequestData("PerPage","20");
+    session.addRequestData("StartDate","0");
+    session.addRequestData("EndDate","0");
 
+    //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
+    Singleton<ServiceManager>::Instance().doAction(session);
+    //调用返回,判断回话的应答标志
+    if(session.getErrNo() == 0){
+       result =  session.getRow(0);
+       return true;
+    }else{
+        result = QStringList()<<session.getLastErrString();
+        return false;
+    }
 }
 
 //将QLabel上显示的图片转换成字符串
@@ -137,9 +177,8 @@ bool GbsToolFunctions::contractIsValid(const QString &num)
   功能:从服务接口获取指定节点的图片
   参数:nodeNmae = 获取那个节点的图片,取值= ["Register", "Sampling", "Assay", "Sell", "Weigh", "Unload", "Settlement"]
        number = 数据库索引编号
-  返回:获取的图片列表
+  返回:获取的image图片列表
 */
-
 QList<QImage> GbsToolFunctions::getImageFromService(const QString &nodeName, const QString &number)
 {
     QList<QImage> list;

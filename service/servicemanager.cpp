@@ -42,7 +42,13 @@
 #include "queryregister.h"
 #include "editregister.h"
 #include "querysellerbyidentityid.h"
+#include "queryassaybysamplebox.h"
 #include "querypicture.h"
+#include "queryregisterbytagnum.h"
+#include "editsampling.h"
+#include "querysampling.h"
+#include "editassay.h"
+#include "queryassay.h"
 
 ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
 {
@@ -90,6 +96,12 @@ ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
     m_servicesMap[CmdEditRegister] = new EditRegister;
     m_servicesMap[CmdQuerySellerByIdentityID] = new QuerySellerByIdentityID;
     m_servicesMap[CmdQueryPicture] = new QueryPicture;
+    m_servicesMap[CmdQueryRegisterByTagNum] = new QueryRegisterByTagNum;
+    m_servicesMap[CmdEditSamling] = new EditSampling;
+    m_servicesMap[CmdQuerySamling] = new QuerySampling;
+    m_servicesMap[CmdQueryAssayBySampleBoxNum] = new QueryAssaySampleBox;
+    m_servicesMap[CmdEditAssay] = new EditAssay;
+    m_servicesMap[CmdQueryAssay] = new QueryAssay;
 }
 
 ServiceManager::~ServiceManager()
