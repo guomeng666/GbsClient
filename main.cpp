@@ -5,6 +5,7 @@
 #include "gbsimagewidget.h"
 #include "gbstoolfunctions.h"
 #include "frmsampling.h"
+#include "frmsell.h"
 #include "frmassay.h"
 #include <QApplication>
 

@@ -53,7 +53,11 @@ HEADERS += \
     $$PWD/business/sampling/querysampling.h \
     $$PWD/business/queryassaybySampleBox/queryassaybysamplebox.h \
     $$PWD/business/assay/editassay.h \
-    $$PWD/business/assay/queryassay.h
+    $$PWD/business/assay/queryassay.h \
+    $$PWD/business/queryassaytosell/queryassaytosell.h \
+    $$PWD/business/sell/editsell.h \
+    $$PWD/business/sell/querysell.h \
+    $$PWD/business/sell/sellgrain.h
 
 
 SOURCES += \
@@ -109,5 +113,8 @@ SOURCES += \
     $$PWD/business/sampling/querysampling.cpp \
     $$PWD/business/queryassaybySampleBox/queryassaybysamplebox.cpp \
     $$PWD/business/assay/editassay.cpp \
-    $$PWD/business/assay/queryassay.cpp
+    $$PWD/business/assay/queryassay.cpp \
+    $$PWD/business/queryassaytosell/queryassaytosell.cpp \
+    $$PWD/business/sell/querysell.cpp \
+    $$PWD/business/sell/sellgrain.cpp
 

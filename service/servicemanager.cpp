@@ -49,6 +49,9 @@
 #include "querysampling.h"
 #include "editassay.h"
 #include "queryassay.h"
+#include "queryassaytosell.h"
+#include "sellgrain.h"
+#include "querysell.h"
 
 ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
 {
@@ -102,6 +105,9 @@ ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
     m_servicesMap[CmdQueryAssayBySampleBoxNum] = new QueryAssaySampleBox;
     m_servicesMap[CmdEditAssay] = new EditAssay;
     m_servicesMap[CmdQueryAssay] = new QueryAssay;
+    m_servicesMap[CmdQueryAssayToSell] = new QueryAssayToSell;
+    m_servicesMap[CmdSellGrain] = new SellGrain;
+    m_servicesMap[CmdQuerySell] = new QuerySell;
 }
 
 ServiceManager::~ServiceManager()

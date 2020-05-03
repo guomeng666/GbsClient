@@ -46,7 +46,9 @@ FORMS += \
     $$PWD/frmsampling/frmsamplingedit.ui \
     $$PWD/frmsampling/frmsamplingtable.ui \
     $$PWD/frmassay/frmassayedit.ui \
-    $$PWD/frmassay/frmassaytable.ui
+    $$PWD/frmassay/frmassaytable.ui \
+    $$PWD/frmsell/frmselledit.ui \
+    $$PWD/frmsell/frmselltable.ui
 
 
 
@@ -99,7 +101,9 @@ HEADERS += \
     $$PWD/frmsampling/frmsamplingedit.h \
     $$PWD/frmsampling/frmsamplingtable.h \
     $$PWD/frmassay/frmassayedit.h \
-    $$PWD/frmassay/frmassaytable.h
+    $$PWD/frmassay/frmassaytable.h \
+    $$PWD/frmsell/frmselledit.h \
+    $$PWD/frmsell/frmselltable.h
 
 SOURCES += \
     $$PWD/frmpermission/frmpermissionedit.cpp \
@@ -150,4 +154,6 @@ SOURCES += \
     $$PWD/frmsampling/frmsamplingedit.cpp \
     $$PWD/frmsampling/frmsamplingtable.cpp \
     $$PWD/frmassay/frmassayedit.cpp \
-    $$PWD/frmassay/frmassaytable.cpp
+    $$PWD/frmassay/frmassaytable.cpp \
+    $$PWD/frmsell/frmselledit.cpp \
+    $$PWD/frmsell/frmselltable.cpp

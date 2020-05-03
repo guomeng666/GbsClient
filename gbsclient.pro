@@ -50,10 +50,11 @@ INCLUDEPATH +=  $$PWD\frmlogin\
                 $$PWD\frmtable\frmregister\
                 $$PWD\frmtable\frmsampling\
                 $$PWD\frmtable\frmassay\
+                $$PWD\frmtable\frmsell\
                 $$PWD\frmbusiness\frmassay\
                 $$PWD\frmbusiness\frmregister\
                 $$PWD\frmbusiness\frmsampling\
-
+                $$PWD\frmbusiness\frmsell\
 
 INCLUDEPATH +=  $$PWD\service\base\department\
                 $$PWD\service\base\permission\
@@ -82,6 +83,8 @@ INCLUDEPATH +=  $$PWD\service\base\department\
                 $$PWD\service\business\queryRegistbyTagNum\
                 $$PWD\service\business\queryassaybySampleBox\
                 $$PWD\service\business\assay\
+                $$PWD\service\business\queryassaytosell\
+                $$PWD\service\business\sell\
 
 SOURCES += systemconfig.cpp \
            main.cpp

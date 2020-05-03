@@ -24,6 +24,8 @@
 #include "frmsampling.h"
 #include "frmassay.h"
 #include "frmassaytable.h"
+#include "frmsell.h"
+#include "frmselltable.h"
 #include "ui_frmmanager.h"
 #include <QDebug>
 #include <QToolBar>
@@ -81,6 +83,10 @@ QWidget* Frmmanager::frmFactory(const QString &name)
         return new FrmAssay(this);
     }else if(name == "化验查询"){
         return new FrmAssayTable(this);
+    }else if(name == "售粮业务"){
+        return new FrmSell(this);
+    }else if(name == "售粮查询"){
+        return new FrmSellTable(this);
     }
     return nullptr;
 }

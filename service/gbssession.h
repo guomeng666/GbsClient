@@ -26,6 +26,10 @@
 #define CmdEditAssay "13"
 #define CmdQueryAssay "14"
 
+#define CmdQueryAssayToSell "15"
+#define CmdSellGrain "16"
+#define CmdQuerySell "17"
+
 #define CmdEditVehicle "256"
 #define CmdQueryVehicle "257"
 
@@ -87,11 +91,11 @@
 #define CmdQuerPermission "508"
 
 #define errNetWork     255
-#define errDataExist   3  //添加的数据已经存在
-#define errDataNoExist 4 //修改的数据不存在
+#define errDataExist   3  //数据已经存在
+#define errDataNoExist 4  //数据不存在
 #define errSelectItem  5  //修改数据的选择项已经删除
 
-#define errNoExist  8  //修改数据的选择项已经删除
+#define errNoExist  8    //其他异常,具体看错误消息
 
 class GbsSession : public QObject
 {
@@ -137,6 +141,9 @@ public:
     QString getLastErrString();
     //获取组装好的表格数据
     QList<QStringList> getTableData() {return m_row; }
+
+    void setErrMsg(const QString &msg) { m_errStr = msg; }
+    QString getErrMsg() { return m_errStr; }
 
 signals:
 
