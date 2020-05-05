@@ -14,6 +14,7 @@
 #define CmdQueryRegister "2"
 
 #define CmdQueryPicture "40"
+#define CmdQueryWeighPicture "41"
 
 #define CmdQuerySellerByIdentityID "7"
 
@@ -29,6 +30,13 @@
 #define CmdQueryAssayToSell "15"
 #define CmdSellGrain "16"
 #define CmdQuerySell "17"
+
+#define CmdQueryWeigh "19"
+#define CmdEditWeigh "20"
+#define CmdAlterWeigh "21"
+
+#define CmdEditUnload "22"
+#define CmdQueryUnload "23"
 
 #define CmdEditVehicle "256"
 #define CmdQueryVehicle "257"

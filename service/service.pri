@@ -57,7 +57,11 @@ HEADERS += \
     $$PWD/business/queryassaytosell/queryassaytosell.h \
     $$PWD/business/sell/editsell.h \
     $$PWD/business/sell/querysell.h \
-    $$PWD/business/sell/sellgrain.h
+    $$PWD/business/sell/sellgrain.h \
+    $$PWD/business/weigh/editweigh.h \
+    $$PWD/business/weigh/queryweigh.h \
+    $$PWD/business/querypicture/queryweighpicture.h \
+    $$PWD/business/weigh/alterweigh.h \
 
 
 SOURCES += \
@@ -116,5 +120,9 @@ SOURCES += \
     $$PWD/business/assay/queryassay.cpp \
     $$PWD/business/queryassaytosell/queryassaytosell.cpp \
     $$PWD/business/sell/querysell.cpp \
-    $$PWD/business/sell/sellgrain.cpp
+    $$PWD/business/sell/sellgrain.cpp \
+    $$PWD/business/weigh/editweigh.cpp \
+    $$PWD/business/weigh/queryweigh.cpp \
+    $$PWD/business/querypicture/queryweighpicture.cpp \
+    $$PWD/business/weigh/alterweigh.cpp \
 

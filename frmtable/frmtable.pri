@@ -48,7 +48,9 @@ FORMS += \
     $$PWD/frmassay/frmassayedit.ui \
     $$PWD/frmassay/frmassaytable.ui \
     $$PWD/frmsell/frmselledit.ui \
-    $$PWD/frmsell/frmselltable.ui
+    $$PWD/frmsell/frmselltable.ui \
+    $$PWD/frmweigh/frmweighedit.ui \
+    $$PWD/frmweigh/frmweightable.ui
 
 
 
@@ -103,7 +105,9 @@ HEADERS += \
     $$PWD/frmassay/frmassayedit.h \
     $$PWD/frmassay/frmassaytable.h \
     $$PWD/frmsell/frmselledit.h \
-    $$PWD/frmsell/frmselltable.h
+    $$PWD/frmsell/frmselltable.h \
+    $$PWD/frmweigh/frmweighedit.h \
+    $$PWD/frmweigh/frmweightable.h
 
 SOURCES += \
     $$PWD/frmpermission/frmpermissionedit.cpp \
@@ -156,4 +160,6 @@ SOURCES += \
     $$PWD/frmassay/frmassayedit.cpp \
     $$PWD/frmassay/frmassaytable.cpp \
     $$PWD/frmsell/frmselledit.cpp \
-    $$PWD/frmsell/frmselltable.cpp
+    $$PWD/frmsell/frmselltable.cpp \
+    $$PWD/frmweigh/frmweighedit.cpp \
+    $$PWD/frmweigh/frmweightable.cpp

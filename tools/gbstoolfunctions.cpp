@@ -184,10 +184,15 @@ QList<QImage> GbsToolFunctions::getImageFromService(const QString &nodeName, con
     QList<QImage> list;
     //创建回话
     GbsSession session;
-    session.addRequestData("Cmd",CmdQueryPicture);
+    if(nodeName == "Weigh"){
+        session.addRequestData("Cmd",CmdQueryWeighPicture);
+    }
+    else{
+        session.addRequestData("Cmd",CmdQueryPicture);
+        session.addRequestData("Node",nodeName);
+    }
     session.addRequestData("Sender","Admin");
     session.addRequestData("Number",number);
-    session.addRequestData("Node",nodeName);
 
     //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
     Singleton<ServiceManager>::Instance().doAction(session);

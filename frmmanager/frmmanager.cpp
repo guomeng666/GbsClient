@@ -26,6 +26,8 @@
 #include "frmassaytable.h"
 #include "frmsell.h"
 #include "frmselltable.h"
+#include "frmweigh.h"
+#include "frmunload.h"
 #include "ui_frmmanager.h"
 #include <QDebug>
 #include <QToolBar>
@@ -87,6 +89,10 @@ QWidget* Frmmanager::frmFactory(const QString &name)
         return new FrmSell(this);
     }else if(name == "售粮查询"){
         return new FrmSellTable(this);
+    }else if(name == "检斤业务"){
+        return new FrmWeigh(this);
+    }else if(name == "卸粮业务"){
+        return new FrmUnload(this);
     }
     return nullptr;
 }

@@ -52,6 +52,10 @@
 #include "queryassaytosell.h"
 #include "sellgrain.h"
 #include "querysell.h"
+#include "queryweigh.h"
+#include "editweigh.h"
+#include "queryweighpicture.h"
+#include "alterweigh.h"
 
 ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
 {
@@ -108,6 +112,10 @@ ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
     m_servicesMap[CmdQueryAssayToSell] = new QueryAssayToSell;
     m_servicesMap[CmdSellGrain] = new SellGrain;
     m_servicesMap[CmdQuerySell] = new QuerySell;
+    m_servicesMap[CmdQueryWeigh] = new QueryWeigh;
+    m_servicesMap[CmdEditWeigh] = new EditWeigh;
+    m_servicesMap[CmdAlterWeigh] = new AlterWeigh;
+    m_servicesMap[CmdQueryWeighPicture] = new QueryWeighPicture;
 }
 
 ServiceManager::~ServiceManager()
