@@ -52,6 +52,7 @@ INCLUDEPATH +=  $$PWD\frmlogin\
                 $$PWD\frmtable\frmassay\
                 $$PWD\frmtable\frmsell\
                 $$PWD\frmtable\frmweigh\
+                $$PWD\frmtable\frmunload\
                 $$PWD\frmbusiness\frmassay\
                 $$PWD\frmbusiness\frmregister\
                 $$PWD\frmbusiness\frmsampling\
@@ -84,6 +85,7 @@ INCLUDEPATH +=  $$PWD\service\base\department\
                 $$PWD\service\business\queryseller\
                 $$PWD\service\business\querypicture\
                 $$PWD\service\business\queryRegistbyTagNum\
+                $$PWD\service\business\queryRegisterbylicense\
                 $$PWD\service\business\queryassaybySampleBox\
                 $$PWD\service\business\assay\
                 $$PWD\service\business\queryassaytosell\

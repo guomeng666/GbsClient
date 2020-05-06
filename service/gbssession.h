@@ -18,6 +18,8 @@
 
 #define CmdQuerySellerByIdentityID "7"
 
+#define CmdQueryRegisterByLicense "8"
+
 #define CmdQueryRegisterByTagNum "9"
 
 #define CmdEditSamling "10"

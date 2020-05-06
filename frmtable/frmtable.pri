@@ -50,7 +50,9 @@ FORMS += \
     $$PWD/frmsell/frmselledit.ui \
     $$PWD/frmsell/frmselltable.ui \
     $$PWD/frmweigh/frmweighedit.ui \
-    $$PWD/frmweigh/frmweightable.ui
+    $$PWD/frmweigh/frmweightable.ui \
+    $$PWD/frmunload/frmunloadedit.ui \
+    $$PWD/frmunload/frmunloadtable.ui
 
 
 
@@ -107,7 +109,9 @@ HEADERS += \
     $$PWD/frmsell/frmselledit.h \
     $$PWD/frmsell/frmselltable.h \
     $$PWD/frmweigh/frmweighedit.h \
-    $$PWD/frmweigh/frmweightable.h
+    $$PWD/frmweigh/frmweightable.h \
+    $$PWD/frmunload/frmunloadedit.h \
+    $$PWD/frmunload/frmunloadtable.h
 
 SOURCES += \
     $$PWD/frmpermission/frmpermissionedit.cpp \
@@ -162,4 +166,6 @@ SOURCES += \
     $$PWD/frmsell/frmselledit.cpp \
     $$PWD/frmsell/frmselltable.cpp \
     $$PWD/frmweigh/frmweighedit.cpp \
-    $$PWD/frmweigh/frmweightable.cpp
+    $$PWD/frmweigh/frmweightable.cpp \
+    $$PWD/frmunload/frmunloadedit.cpp \
+    $$PWD/frmunload/frmunloadtable.cpp

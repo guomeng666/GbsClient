@@ -393,233 +393,170 @@
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="1">
         <widget class="QWidget" name="widget_2" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,1">
+         <layout class="QVBoxLayout" name="verticalLayout_4" stretch="8,1">
           <property name="bottomMargin">
            <number>50</number>
           </property>
           <item>
            <widget class="QWidget" name="widget_3" native="true">
-            <layout class="QGridLayout" name="gridLayout_5">
+            <layout class="QGridLayout" name="gridLayout_3">
              <property name="verticalSpacing">
               <number>40</number>
              </property>
-             <item row="1" column="2">
-              <widget class="QLabel" name="label_8">
+             <item row="0" column="2">
+              <widget class="QLabel" name="label_12">
                <property name="text">
-                <string>车辆颜色:</string>
+                <string>粮食类型:</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="2">
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="editPurchase">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="editPackType">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
               <widget class="QLabel" name="label_6">
                <property name="text">
                 <string>车架号码:</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>车牌号码:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLineEdit" name="editLiscense">
-               <property name="readOnly">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="3">
-              <widget class="QLineEdit" name="editColor">
-               <property name="readOnly">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>备注:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="editVehicleType">
-               <property name="readOnly">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="label">
-               <property name="text">
-                <string>扣重方式:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="1">
-              <widget class="QComboBox" name="cbxTakeType">
-               <item>
-                <property name="text">
-                 <string>按袋扣</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>按总吨扣</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item row="0" column="3">
+             <item row="2" column="3">
               <widget class="QLineEdit" name="editFrameNum">
                <property name="readOnly">
                 <bool>true</bool>
                </property>
               </widget>
              </item>
-             <item row="1" column="0">
+             <item row="3" column="0">
               <widget class="QLabel" name="label_7">
                <property name="text">
                 <string>车辆类型:</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="2" rowspan="2" colspan="2">
-              <widget class="QStackedWidget" name="stackedWidgetTake">
-               <property name="currentIndex">
-                <number>0</number>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_13">
+               <property name="text">
+                <string>包装类型:</string>
                </property>
-               <widget class="QWidget" name="page">
-                <layout class="QGridLayout" name="gridLayout_3">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="horizontalSpacing">
-                  <number>0</number>
-                 </property>
-                 <property name="verticalSpacing">
-                  <number>30</number>
-                 </property>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="label_4">
-                   <property name="text">
-                    <string>扣重/每袋：</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QLineEdit" name="editBagNum"/>
-                 </item>
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_3">
-                   <property name="text">
-                    <string>袋数：</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QLineEdit" name="editBagTake"/>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="page_2">
-                <layout class="QGridLayout" name="gridLayout_6">
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_9">
-                   <property name="text">
-                    <string>扣重/每吨:</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QLineEdit" name="editTonTake"/>
-                 </item>
-                 <item row="1" column="1">
-                  <spacer name="verticalSpacer_3">
-                   <property name="orientation">
-                    <enum>Qt::Vertical</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>20</width>
-                     <height>40</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                </layout>
-               </widget>
               </widget>
              </item>
-             <item row="6" column="2">
-              <spacer name="verticalSpacer_5">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>收购流程:</string>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>51</height>
-                </size>
-               </property>
-              </spacer>
+              </widget>
              </item>
-             <item row="5" column="1" rowspan="2">
-              <spacer name="verticalSpacer_4">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="editLiscense">
+               <property name="readOnly">
+                <bool>false</bool>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>102</height>
-                </size>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLineEdit" name="editGrainType">
+               <property name="readOnly">
+                <bool>true</bool>
                </property>
-              </spacer>
+              </widget>
              </item>
              <item row="2" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>车牌号码:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="editVehicleType">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>车辆颜色:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QLineEdit" name="editColor">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1" colspan="3">
+              <widget class="QLineEdit" name="editRemarks"/>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>备注:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="3">
+              <widget class="QDoubleSpinBox" name="doubleSpinBoxBag">
+               <property name="suffix">
+                <string>kg</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
               <widget class="QLabel" name="label_10">
                <property name="text">
                 <string>卸库位:</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
+             <item row="5" column="1">
+              <widget class="QLineEdit" name="editBagNum"/>
+             </item>
+             <item row="4" column="1">
               <widget class="QComboBox" name="cbxWareHouse"/>
              </item>
-             <item row="3" column="1" colspan="3">
-              <widget class="QTextEdit" name="textEditRemarks">
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>80</height>
-                </size>
+             <item row="5" column="0">
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>袋数：</string>
                </property>
               </widget>
+             </item>
+             <item row="5" column="2">
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>扣重/每袋：</string>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="1">
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
              </item>
             </layout>
            </widget>
@@ -702,7 +639,7 @@
         <number>0</number>
        </property>
        <item>
-        <widget class="FrmWeighTable" name="widget_4" native="true"/>
+        <widget class="FrmUnloadTable" name="widget_4" native="true"/>
        </item>
       </layout>
      </widget>
@@ -1073,9 +1010,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>FrmWeighTable</class>
+   <class>FrmUnloadTable</class>
    <extends>QWidget</extends>
-   <header>frmweightable.h</header>
+   <header>frmunloadtable.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

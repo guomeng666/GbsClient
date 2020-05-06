@@ -13,8 +13,7 @@ HEADERS += \
     $$PWD/frmsell/frmsell.h \
     $$PWD/frmweigh/frmweigh.h \
     $$PWD/frmunload/frmunload.h \
-    $$PWD/../service/business/unload/editweigh.h \
-    $$PWD/../service/business/unload/queryweigh.h
+
 
 SOURCES += \
     $$PWD/frmregister/frmregister.cpp \
@@ -23,5 +22,4 @@ SOURCES += \
     $$PWD/frmsell/frmsell.cpp \
     $$PWD/frmweigh/frmweigh.cpp \
     $$PWD/frmunload/frmunload.cpp \
-    $$PWD/../service/business/unload/editweigh.cpp \
-    $$PWD/../service/business/unload/queryweigh.cpp
+

@@ -237,7 +237,10 @@ void Frmmanager::onMenuAction()
     QString actionText = pAction->text();
     if(m_frmMap.value(actionText) == nullptr){
         QWidget *frmTable = frmFactory(actionText);
-        Q_ASSERT(frmTable != nullptr);
+        if(frmTable == nullptr){
+            QMessageBox::warning(NULL,"系统提示","对不起,该功能还没有实现","确定");
+            return;
+        }
         m_frmMap[actionText] = frmTable;
         ui->tabWidget->addTab(frmTable,actionText);
         ui->tabWidget->setCurrentWidget(frmTable);

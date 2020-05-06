@@ -73,7 +73,7 @@ bool GbsToolFunctions::getSellerInfoByIdentityID(QString identity, QStringList &
 
 /**
   功能:通过车牌号码查询车辆信息
-  参数: tagNum = 电子标签号码, result = 查询的数据
+  参数: liscense = 车牌号码, result = 查询的数据
   成功返回result格式: "ID","Name","VehicleType","color","FrameID","Creater","Updater","CreateTime","UpdateTime"
   错误返回result格式: "具体失败的内容"
   返回: 存在:true , 不存在:false
@@ -89,6 +89,33 @@ bool GbsToolFunctions::getVehicleByLiscense(QString liscense, QStringList &resul
     session.addRequestData("PerPage","20");
     session.addRequestData("StartDate","0");
     session.addRequestData("EndDate","0");
+
+    //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
+    Singleton<ServiceManager>::Instance().doAction(session);
+    //调用返回,判断回话的应答标志
+    if(session.getErrNo() == 0){
+       result =  session.getRow(0);
+       return true;
+    }else{
+        result = QStringList()<<session.getLastErrString();
+        return false;
+    }
+}
+
+/**
+  功能:通过车牌号码查询登记信息
+  参数:liscense = 车牌号码, result = 查询的数据
+  成功返回result格式: "RegisterID","Name","VehicleType","color","FrameID"
+  错误返回result格式: "具体失败的内容"
+  返回: 存在:true , 不存在:false
+*/
+bool GbsToolFunctions::getRegisterByLiscense(QString liscense, QStringList &result)
+{
+    //创建回话
+    GbsSession session;
+    session.addRequestData("Cmd",CmdQueryRegisterByLicense);
+    session.addRequestData("Sender","Admin");
+    session.addRequestData("License",liscense);
 
     //把回话传递给服务管理器,服务管理器内部会根据回话内容选择一个合适的服务接口与服务器通讯
     Singleton<ServiceManager>::Instance().doAction(session);

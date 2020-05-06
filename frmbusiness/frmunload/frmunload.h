@@ -19,13 +19,13 @@ class FrmUnload : public QWidget
 public:
     explicit FrmUnload(QWidget *parent = 0);
     ~FrmUnload();
+    void showEvent(QShowEvent *event);
 
-    void editBusinessInformation(QString editStatus);
 private slots:
     void topButtonClick();
     void onMenuButtonClick();
     void on_btnSubmit_clicked();
-    void on_comboBox_currentIndexChanged(int index);
+    void on_editLiscense_returnPressed();
 
 private:
     void initStyle();

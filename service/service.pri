@@ -62,6 +62,9 @@ HEADERS += \
     $$PWD/business/weigh/queryweigh.h \
     $$PWD/business/querypicture/queryweighpicture.h \
     $$PWD/business/weigh/alterweigh.h \
+    $$PWD/business/unload/editunload.h \
+    $$PWD/business/unload/queryunload.h \
+    $$PWD/business/queryRegisterbylicense/queryregisterbylicense.h
 
 
 SOURCES += \
@@ -116,6 +119,8 @@ SOURCES += \
     $$PWD/business/sampling/editsampling.cpp \
     $$PWD/business/sampling/querysampling.cpp \
     $$PWD/business/queryassaybySampleBox/queryassaybysamplebox.cpp \
+    $$PWD/business/queryRegisterbylicense/queryregisterbylicense.cpp\
+    $$PWD/business/querypicture/queryweighpicture.cpp \
     $$PWD/business/assay/editassay.cpp \
     $$PWD/business/assay/queryassay.cpp \
     $$PWD/business/queryassaytosell/queryassaytosell.cpp \
@@ -123,6 +128,6 @@ SOURCES += \
     $$PWD/business/sell/sellgrain.cpp \
     $$PWD/business/weigh/editweigh.cpp \
     $$PWD/business/weigh/queryweigh.cpp \
-    $$PWD/business/querypicture/queryweighpicture.cpp \
     $$PWD/business/weigh/alterweigh.cpp \
-
+    $$PWD/business/unload/editunload.cpp \
+    $$PWD/business/unload/queryunload.cpp \

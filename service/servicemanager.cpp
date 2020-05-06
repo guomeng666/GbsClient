@@ -45,6 +45,7 @@
 #include "queryassaybysamplebox.h"
 #include "querypicture.h"
 #include "queryregisterbytagnum.h"
+#include "queryregisterbylicense.h"
 #include "editsampling.h"
 #include "querysampling.h"
 #include "editassay.h"
@@ -56,6 +57,8 @@
 #include "editweigh.h"
 #include "queryweighpicture.h"
 #include "alterweigh.h"
+#include "queryunload.h"
+#include "editunload.h"
 
 ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
 {
@@ -116,6 +119,9 @@ ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
     m_servicesMap[CmdEditWeigh] = new EditWeigh;
     m_servicesMap[CmdAlterWeigh] = new AlterWeigh;
     m_servicesMap[CmdQueryWeighPicture] = new QueryWeighPicture;
+    m_servicesMap[CmdQueryUnload] = new QueryUnload;
+    m_servicesMap[CmdEditUnload] = new EditUnload;
+    m_servicesMap[CmdQueryRegisterByLicense] = new QueryRegisterByLicense;
 }
 
 ServiceManager::~ServiceManager()
