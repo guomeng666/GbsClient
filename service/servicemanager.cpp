@@ -59,6 +59,7 @@
 #include "alterweigh.h"
 #include "queryunload.h"
 #include "editunload.h"
+#include "querysettlement.h"
 
 ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
 {
@@ -122,6 +123,7 @@ ServiceManager::ServiceManager(QObject *parent) : QObject(parent)
     m_servicesMap[CmdQueryUnload] = new QueryUnload;
     m_servicesMap[CmdEditUnload] = new EditUnload;
     m_servicesMap[CmdQueryRegisterByLicense] = new QueryRegisterByLicense;
+    m_servicesMap[CmdQuerySettlement] = new QuerySettlement;
 }
 
 ServiceManager::~ServiceManager()

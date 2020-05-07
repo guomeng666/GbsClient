@@ -59,6 +59,7 @@ INCLUDEPATH +=  $$PWD\frmlogin\
                 $$PWD\frmbusiness\frmsell\
                 $$PWD\frmbusiness\frmweigh\
                 $$PWD\frmbusiness\frmunload\
+                $$PWD\frmbusiness\frmsettlement\
 
 INCLUDEPATH +=  $$PWD\service\base\department\
                 $$PWD\service\base\permission\
@@ -92,6 +93,7 @@ INCLUDEPATH +=  $$PWD\service\base\department\
                 $$PWD\service\business\sell\
                 $$PWD\service\business\weigh\
                 $$PWD\service\business\unload\
+                $$PWD\service\business\settlement\
 
 SOURCES += systemconfig.cpp \
            main.cpp

@@ -40,6 +40,8 @@
 #define CmdEditUnload "22"
 #define CmdQueryUnload "23"
 
+#define CmdQuerySettlement "24"
+
 #define CmdEditVehicle "256"
 #define CmdQueryVehicle "257"
 

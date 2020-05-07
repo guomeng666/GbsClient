@@ -64,7 +64,8 @@ HEADERS += \
     $$PWD/business/weigh/alterweigh.h \
     $$PWD/business/unload/editunload.h \
     $$PWD/business/unload/queryunload.h \
-    $$PWD/business/queryRegisterbylicense/queryregisterbylicense.h
+    $$PWD/business/queryRegisterbylicense/queryregisterbylicense.h \
+    $$PWD/business/settlement/querysettlement.h
 
 
 SOURCES += \
@@ -131,3 +132,4 @@ SOURCES += \
     $$PWD/business/weigh/alterweigh.cpp \
     $$PWD/business/unload/editunload.cpp \
     $$PWD/business/unload/queryunload.cpp \
+    $$PWD/business/settlement/querysettlement.cpp

@@ -159,3 +159,15 @@ void FrmWeigh::on_btnSubmit_clicked()
 {
     submitWeighInfo();
 }
+
+void FrmWeigh::on_pushButton_clicked()
+{
+    static bool change = false;
+    if(change){
+        change = false;
+        ui->lcdNumber->display(12000);
+    }else{
+        change = true;
+        ui->lcdNumber->display(35000);
+    }
+}

@@ -27,6 +27,8 @@ private slots:
     void on_editTagNum_returnPressed();
     void on_btnSubmit_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     void initStyle();
     void initBtn();

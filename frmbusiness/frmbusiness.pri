@@ -4,7 +4,8 @@ FORMS += \
     $$PWD/frmassay/frmassay.ui \
     $$PWD/frmsell/frmsell.ui \
     $$PWD/frmweigh/frmweigh.ui \
-    $$PWD/frmunload/frmunload.ui
+    $$PWD/frmunload/frmunload.ui \
+    $$PWD/frmsettlement/frmsettlement.ui
 
 HEADERS += \
     $$PWD/frmregister/frmregister.h \
@@ -13,6 +14,7 @@ HEADERS += \
     $$PWD/frmsell/frmsell.h \
     $$PWD/frmweigh/frmweigh.h \
     $$PWD/frmunload/frmunload.h \
+    $$PWD/frmsettlement/frmsettlement.h
 
 
 SOURCES += \
@@ -22,4 +24,5 @@ SOURCES += \
     $$PWD/frmsell/frmsell.cpp \
     $$PWD/frmweigh/frmweigh.cpp \
     $$PWD/frmunload/frmunload.cpp \
+    $$PWD/frmsettlement/frmsettlement.cpp
 

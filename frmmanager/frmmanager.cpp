@@ -28,6 +28,7 @@
 #include "frmselltable.h"
 #include "frmweigh.h"
 #include "frmunload.h"
+#include "frmsettlement.h"
 #include "ui_frmmanager.h"
 #include <QDebug>
 #include <QToolBar>
@@ -93,6 +94,8 @@ QWidget* Frmmanager::frmFactory(const QString &name)
         return new FrmWeigh(this);
     }else if(name == "卸粮业务"){
         return new FrmUnload(this);
+    }else if(name == "结算业务"){
+        return new FrmSettlement(this);
     }
     return nullptr;
 }

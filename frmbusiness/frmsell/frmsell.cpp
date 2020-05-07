@@ -67,7 +67,7 @@ void FrmSell::queryAssayInfo(QString icNumber)
     Singleton<ServiceManager>::Instance().doAction(session);
     //调用返回,判断回话的应答标志
     if(session.getErrNo() == 0){
-        QStringList res = session.getRow(0);
+       QStringList res = session.getRow(0);
        ui->labPurchase->setText(res.at(0));
        ui->labGrainType->setText(res.at(1));
        ui->labPack->setText(res.at(2));

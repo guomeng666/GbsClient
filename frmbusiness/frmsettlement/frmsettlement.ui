@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FrmSell</class>
- <widget class="QWidget" name="FrmSell">
+ <class>FrmSettlement</class>
+ <widget class="QWidget" name="FrmSettlement">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -61,7 +61,7 @@
          <bool>false</bool>
         </property>
         <property name="text">
-         <string>自助售粮终端</string>
+         <string>自助结算终端</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -257,29 +257,28 @@
       <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="7,3">
        <item>
         <widget class="QWidget" name="widget" native="true">
-         <layout class="QVBoxLayout" name="verticalLayout_2" stretch="4,6">
+         <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
            <widget class="QGroupBox" name="groupBox_2">
             <property name="font">
              <font>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="title">
              <string>登记信息</string>
             </property>
-            <layout class="QGridLayout" name="gridLayout_4">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>收购类型:</string>
-               </property>
-              </widget>
-             </item>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <property name="horizontalSpacing">
+              <number>7</number>
+             </property>
+             <property name="verticalSpacing">
+              <number>20</number>
+             </property>
              <item row="0" column="1">
               <widget class="QLabel" name="labPurchase">
                <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
@@ -290,66 +289,129 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="labGrainType">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_2">
                <property name="text">
-                <string/>
+                <string>收购类型:</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="0">
+             <item row="0" column="3">
+              <widget class="QLabel" name="labGrainType">
+               <property name="text">
+                <string>3</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4" colspan="2">
               <widget class="QLabel" name="label_5">
                <property name="text">
                 <string>包装方式:</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="1">
+             <item row="0" column="6">
               <widget class="QLabel" name="labPack">
                <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="0">
+             <item row="1" column="0">
               <widget class="QLabel" name="label_10">
                <property name="text">
                 <string>车牌号码:</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
+             <item row="1" column="1">
               <widget class="QLabel" name="labLicense">
                <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="2">
+             <item row="3" column="3" colspan="2">
+              <widget class="QLabel" name="label_16">
+               <property name="text">
+                <string>银行卡号:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="6">
+              <widget class="QLabel" name="labColor">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
               <widget class="QLabel" name="label_8">
                <property name="text">
                 <string>车辆类型:</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="3">
-              <widget class="QLabel" name="labVehicleType">
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_3">
                <property name="text">
-                <string/>
+                <string>结算人:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="5" colspan="2">
+              <widget class="QLabel" name="labPayType">
+               <property name="text">
+                <string>TextLabel</string>
                </property>
               </widget>
              </item>
              <item row="3" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>银行:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1" colspan="2">
+              <widget class="QLabel" name="labBankType">
+               <property name="text">
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLabel" name="labVehicleType">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3" colspan="2">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>结算方式:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4" colspan="2">
               <widget class="QLabel" name="label_12">
                <property name="text">
                 <string>车辆颜色:</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="1">
-              <widget class="QLabel" name="labColor">
+             <item row="2" column="1" colspan="2">
+              <widget class="QLabel" name="labSeller">
                <property name="text">
-                <string/>
+                <string>TextLabel</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="5" colspan="2">
+              <widget class="QLabel" name="labBankNum">
+               <property name="text">
+                <string>TextLabel</string>
                </property>
               </widget>
              </item>
@@ -360,202 +422,278 @@
            <widget class="QGroupBox" name="groupBox">
             <property name="font">
              <font>
-              <pointsize>16</pointsize>
+              <pointsize>12</pointsize>
              </font>
             </property>
             <property name="title">
-             <string>化验信息</string>
+             <string>扣重信息</string>
             </property>
-            <layout class="QGridLayout" name="gridLayout_3">
-             <property name="horizontalSpacing">
-              <number>40</number>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <property name="verticalSpacing">
+              <number>20</number>
              </property>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_19">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_6">
                <property name="text">
-                <string>霉变:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="labTK">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="3">
-              <widget class="QLabel" name="labBX">
-               <property name="text">
-                <string/>
+                <string>容重扣重比:</string>
                </property>
               </widget>
              </item>
              <item row="0" column="1">
-              <widget class="QLabel" name="labRZ">
+              <widget class="QLabel" name="labRZRatio">
                <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="2">
-              <widget class="QLabel" name="label_30">
+             <item row="0" column="3">
+              <widget class="QLabel" name="label_17">
                <property name="text">
-                <string>棒芯:</string>
+                <string>水分扣重比:</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_21">
+             <item row="0" column="4">
+              <widget class="QLabel" name="labSFRatio">
                <property name="text">
-                <string>破损:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="label_29">
-               <property name="text">
-                <string>土块:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="2">
-              <widget class="QLabel" name="label_33">
-               <property name="text">
-                <string>异种粮:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLabel" name="labMB">
-               <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
              <item row="1" column="0">
-              <widget class="QLabel" name="label_17">
+              <widget class="QLabel" name="label_19">
                <property name="text">
-                <string>水分:</string>
+                <string>霉变扣重比:</string>
                </property>
               </widget>
              </item>
              <item row="1" column="1">
-              <widget class="QLabel" name="labSF">
+              <widget class="QLabel" name="labMBRatio">
                <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="1">
-              <widget class="QLabel" name="labPS">
+             <item row="1" column="3">
+              <widget class="QLabel" name="label_21">
                <property name="text">
-                <string/>
+                <string>破损扣重比:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLabel" name="labPSRatio">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_23">
+               <property name="text">
+                <string>热损扣重比:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="labRSRatio">
+               <property name="text">
+                <string>4</string>
                </property>
               </widget>
              </item>
              <item row="2" column="3">
-              <widget class="QLabel" name="labYZL">
+              <widget class="QLabel" name="label_39">
                <property name="text">
-                <string/>
+                <string>杂质扣重比:</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_14">
+             <item row="2" column="4">
+              <widget class="QLabel" name="labZZRatio">
                <property name="text">
-                <string>容重:</string>
+                <string>4</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="3">
-              <widget class="QLabel" name="labYW">
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_25">
                <property name="text">
-                <string/>
+                <string>并间杂扣重比:</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
-              <widget class="QLabel" name="labRS">
+             <item row="3" column="1">
+              <widget class="QLabel" name="labBJZRatio">
                <property name="text">
-                <string/>
+                <string>4</string>
                </property>
               </widget>
              </item>
              <item row="3" column="3">
-              <widget class="QLabel" name="labSPL">
+              <widget class="QLabel" name="label_28">
                <property name="text">
-                <string/>
+                <string>总扣重比:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="4">
+              <widget class="QLabel" name="labTotalRatio">
+               <property name="text">
+                <string>10</string>
                </property>
               </widget>
              </item>
              <item row="4" column="2">
-              <widget class="QLabel" name="label_36">
-               <property name="text">
-                <string>异味:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="2">
-              <widget class="QLabel" name="label_39">
-               <property name="text">
-                <string>杂质:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="label_23">
-               <property name="text">
-                <string>热损:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="2">
-              <widget class="QLabel" name="label_34">
-               <property name="text">
-                <string>水泡粒:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <widget class="QLabel" name="label_25">
-               <property name="text">
-                <string>并间杂:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="1">
-              <widget class="QLabel" name="labBJZ">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="0">
-              <widget class="QLabel" name="label_26">
-               <property name="text">
-                <string>小石子:</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="3">
-              <widget class="QLabel" name="labZZ">
-               <property name="text">
-                <string/>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="1">
               <widget class="QLabel" name="labXSZ">
                <property name="text">
                 <string/>
                </property>
               </widget>
              </item>
-             <item row="7" column="0" colspan="4">
-              <widget class="QLabel" name="labReject">
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="title">
+             <string>重量信息</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <property name="verticalSpacing">
+              <number>20</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_30">
                <property name="text">
-                <string/>
+                <string>毛重:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="labRoughtWeight">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="labTrae">
+               <property name="text">
+                <string>皮重:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1" colspan="2">
+              <widget class="QLabel" name="labNetWeight">
+               <property name="text">
+                <string>labNetWeight</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="4">
+              <widget class="QLabel" name="labTareWeight">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>净重:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLabel" name="label_26">
+               <property name="text">
+                <string>卸粮扣重:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QLabel" name="labUnloadDeduct">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="title">
+             <string>结算信息</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <property name="verticalSpacing">
+              <number>20</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>计价名称:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="labValuation">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="labPrice">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="label_18">
+               <property name="text">
+                <string>收购单价:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QLabel" name="labTotalPrice">
+               <property name="text">
+                <string>10</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>有效总重:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLabel" name="labValidWeight">
+               <property name="text">
+                <string>4</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>总金额:</string>
                </property>
               </widget>
              </item>
@@ -577,46 +715,6 @@
           <property name="spacing">
            <number>20</number>
           </property>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <item>
-             <widget class="QLabel" name="label_41">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>50</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>16</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string>收购状态:</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="labStatus">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>50</height>
-               </size>
-              </property>
-              <property name="font">
-               <font>
-                <pointsize>16</pointsize>
-               </font>
-              </property>
-              <property name="text">
-               <string> 正常</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <item>
@@ -675,45 +773,7 @@
              </size>
             </property>
             <property name="text">
-             <string>出售</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="btnRejectSell">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>拒售</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QToolButton" name="btnConcession">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>100</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>让步出售</string>
+             <string> 打印</string>
             </property>
            </widget>
           </item>
